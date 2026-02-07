@@ -1,4 +1,24 @@
-# README Generator Skill
+---
+name: readme-generator
+title: Professional README Generator
+description: Analyzes codebase and generates comprehensive README.md with setup, examples, architecture, and badges
+activation_regex: "(generate|create|write|update|improve|document) (README|docs?|documentation)"
+allowed_tools:
+  - view
+  - ls
+  - cat
+  - tree
+  - grep
+parameters:
+  mode:
+    type: string
+    description: "enhance|regenerate|analyze"
+    default: "enhance"
+  project_type:
+    type: string
+    description: "library|app|cli|microservice|framework"
+    optional: true
+---
 
 ## Skill Activation Triggers
 

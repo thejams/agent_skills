@@ -1,4 +1,19 @@
-# Security & Code Quality Analysis Skill
+---
+name: security-audit
+title: Security & Code Quality Analyzer
+description: Comprehensive security scan detecting critical patterns like thundering herd, SQLi, leaks; generates severity-ranked reports with fixes
+activation_regex: "(security|vulnerab|audit|review|scan|bug|leak|race)( code|.*)"
+allowed_tools: "view ls rg git cat tree grep glob"
+parameters:
+  scope:
+    type: string
+    enum: ["full", "changed", "path"]
+    default: "full"
+  focus:
+    type: string
+    description: "sql-injection|memory-leaks|ddos|rate-limit"
+    optional: true
+---
 
 ## Skill Activation Triggers
 

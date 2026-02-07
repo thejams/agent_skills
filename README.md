@@ -24,7 +24,30 @@ Each skill is documented in a human- and AI-readable format to ensure consistent
 ## 📂 Repository Structure
 
 ```text
-.agent/
-└── skills/
-    └── <skill-name>/
-        └── SKILL.md
+your-main-repo/
+├── claude/                 # For Claude Code
+│   └── .claude/
+│       └── skills/
+│           └── <skill-name>/
+│               ├── SKILL.md          # Core skill definition
+│               ├── examples/         # (Optional) Sample inputs/outputs
+│               └── tools/            # (Optional) Scripts/templates
+│
+├── cursor/                 # For Cursor IDE
+│   └── .cursor/
+│       └── skills/
+│           └── <skill-name>/         # Identical content
+│               └── SKILL.md
+│
+├── antigravity/           # For Google Antigravity
+│   └── .agent/
+│       └── skills/
+│           └── <skill-name>/         # Identical content
+│               └── SKILL.md
+│
+├── universal/             # Source of truth (single copy)
+│   └── skills/
+│       └── <skill-name>/
+│           └── SKILL.md
+└── README.md
+
